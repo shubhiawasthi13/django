@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>show data</title>
+</head>
+<body>
+  {% if students %}
+    <h1>All students data</h1>
+    <table border = "1">
+        <tr>
+            <th>name</th>
+            <th>email</th>
+            <th>city</th>
+        </tr>
+        {% for student in students %}
+        <tr>
+         
+            <td>{{student.name}}</td>
+            <td>{{student.email}}</td>
+            <td>{{student.city}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    {% else %}
+    <h1>no data</h1>
+    {% endif %}
+</body>
+</html>

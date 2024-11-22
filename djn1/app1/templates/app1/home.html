@@ -1,0 +1,27 @@
+
+{% extends 'app1/base.html' %}
+{% block title %}
+home
+{% endblock  %}
+{% block hero %}
+<p>hero section</p>
+{% endblock hero %}
+
+{% comment %} <!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>home page</title>
+    <link rel="stylesheet" href="{% static 'app1/css/style.css' %}">
+</head>
+<body>
+    <h1>heelo home</h1>
+    <p>{{name}}</p>   
+    <button onclick =hello()>click me</button>
+
+
+    <script src="{% static 'app1/js/script.js' %}"></script> 
+</body>
+</html> {% endcomment %}

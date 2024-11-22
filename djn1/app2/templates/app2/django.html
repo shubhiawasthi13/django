@@ -1,0 +1,15 @@
+
+{% extends 'app1/base.html' %}
+{% load static %}
+{% block title %}
+django
+{% endblock  %} 
+
+{% block stylecss %}
+{{ block.super }}
+<link rel="stylesheet" href="{% static "app2/css/style.css" %}">
+{% endblock stylecss %}
+
+{% block content %}
+<h3>django</h3>
+{% endblock content %}

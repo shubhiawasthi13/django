@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock  %}</title>
+  {% block stylecss  %}<link rel="stylesheet" href="{% static "app1/css/style.css" %}">{% endblock  %}
+    
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href={% url "home" %}>Home</li>
+             <li><a href={% url "skill" %}>skill</a></li>
+             <li><a href={% url "dj" %}>Django</a></li>
+        </ul>
+
+    </nav>
+
+   
+    {% block hero %}{% endblock hero %}
+   
+ 
+    {% block content %}{% endblock content %}
+     
+{% comment %} use include here {% endcomment %}
+    {% include "app1/components/footer.html" %}
+  
+</body>
+</html>
